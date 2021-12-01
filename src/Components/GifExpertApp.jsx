@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { AddCategory } from './AddCategory';
 import { GifGrid } from './GifGrid';
 
-export const GifExpertApp = () => {
-  const [categories, setCategories] = useState([
-    'Sasuke',
-  ]);
+export const GifExpertApp = ({ defaultCategories=[] }) => {
+  const [categories, setCategories] = useState(
+    defaultCategories
+  );
 
   return (
     <div className="container-card">
